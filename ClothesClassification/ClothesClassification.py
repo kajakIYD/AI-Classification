@@ -1,3 +1,9 @@
+def showPredictions(test_labels, predictions):
+    for i in range (0, len(predictions)):
+        print('Prediction for label ' +str(i) + ' is ' + str(np.argmax(predictions[i])) + ' should be: ' + str(test_labels[i]))
+
+
+
 print('Importing tf and keras')
 # TensorFlow and tf.keras
 import tensorflow as tf
@@ -26,7 +32,7 @@ print(train_images.shape)
 len(train_labels)
 
 #testplt.showImg(train_images[0])
-testplt.showImages(train_images, train_labels, class_names)
+#testplt.showImages(train_images, train_labels, class_names)
 
 train_images = train_images / 255.0
 
@@ -48,11 +54,5 @@ test_loss, test_acc = model.evaluate(test_images, test_labels)
 
 print('Test accuracy:', test_acc)
 
-predictions = model.predict(test_labels, test_images)
+predictions = model.predict(test_images)
 showPredictions(test_labels, predictions)
-
-
-
-def showPredictions(test_labels, predictions):
-    for i in range (0, len(predictions)):
-        print('Prediction for label ' + i + ' is ' + np.argmax(predictions[i] + ' should be: ' + test_labels[i]))
