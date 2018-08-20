@@ -1,6 +1,10 @@
-def showPredictions(test_labels, predictions):
+def showInvalidPredictions(test_labels, predictions):
+    invalidPredictions = []
     for i in range (0, len(predictions)):
-        print('Prediction for label ' +str(i) + ' is ' + str(np.argmax(predictions[i])) + ' should be: ' + str(test_labels[i]))
+        if (np.argmax(predictions[i]) != test_labels[i]):
+            print('Prediction for label ' +str(i) + ' is ' + str(np.argmax(predictions[i])) + ' should be: ' + str(test_labels[i]))
+            invalidPredictions.append((i, np.argmax(predictions[i]), test_labels[i]))
+    return invalidPredictions
 
 
 
@@ -55,4 +59,9 @@ test_loss, test_acc = model.evaluate(test_images, test_labels)
 print('Test accuracy:', test_acc)
 
 predictions = model.predict(test_images)
-showPredictions(test_labels, predictions)
+invalidPredictions = showInvalidPredictions(test_labels, predictions)
+filteredTestImages = []
+filteredTestImages = testplt.filterTestImages(test_images, invalidPredictions)
+filteredTestImages = filteredTestImages[0:10]
+invalidPredictions = invalidPredictions[0:10]
+testplt.showAndCompareInvalidPredictions(invalidPredictions, filteredTestImages, class_names)
