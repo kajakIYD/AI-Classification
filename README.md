@@ -1,2 +1,2 @@
 # AI-Classification
-TensorFlow sandbox for classification purposes.
+TensorFlow and scikit-learn sandbox for classification purposes.
