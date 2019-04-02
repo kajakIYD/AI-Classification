@@ -11,6 +11,7 @@ import conf_mat_wrapper as cmat_w
 
 
 # TODO:
+# Scale features
 
 def load_dataset(filepath):
     return cr.load_csv(filepath=filepath)
