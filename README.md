@@ -2,7 +2,7 @@
 TensorFlow and scikit-learn sandbox for classification purposes. 
 
 ## Sick or well heart disease
-A little bit less famous classification task, that helps to figure out who suffers from heart disease based on several numerical attributes. Techniques used: **PCA**, **SGDClassifier**, **SVC**, **RandomForest**, **DecisionTree**
+A little bit less famous classification task, that helps to figure out who suffers from heart disease based on several numerical attributes. <br>Techniques used: **PCA**, **SGDClassifier**, **SVC**, **RandomForest**, **DecisionTree** <br>
 Very useful tool in context of analysis and comparison of different is **confusion matrix**. These are listed below:
 
 ![SGD](https://github.com/kajakIYD/AI-Classification/blob/master/SickOrWellHeartDisease/DocumentationImages/SGD_full_set.PNG)
