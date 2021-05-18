@@ -25,6 +25,9 @@ Accuracy ranking: [{'name': 'SVC(C=0.01, cac', 'value': 0.881578947368421}, {'na
 
 **Best accuracy: {'name': 'SVC(C=0.01, cac', 'value': 0.881578947368421} <br>Best precision: {'name': 'SGDClassifier(a', 'value': 0.8571428571428571} <br>Best recall: {'name': 'RandomForestCla', 'value': 0.9032258064516129}**
 
+## Wine Classification
+Tackling wine-dataset (https://archive.ics.uci.edu/ml/datasets/wine) with usage of **scikit-learn**: https://github.com/kajakIYD/Wine-classification
+
 ## Clothes Classification
 Famous MNIST classification task. Done with usage of **TensorFlow** and **Keras**
 
